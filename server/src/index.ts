@@ -2,7 +2,9 @@ import path from 'path';
 import dotenv from 'dotenv';
 
 // Load .env from project root (one level above /server)
-dotenv.config({ path: path.join(__dirname, '../../.env') });
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config({ path: path.join(__dirname, '../../.env') });
+}
 
 import app from './app';
 import { connectDB } from './config/db';

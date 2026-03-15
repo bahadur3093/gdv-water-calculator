@@ -1,16 +1,8 @@
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 import { env } from '../config/env';
 import { logger } from '../utils/logger';
 
-const transporter = nodemailer.createTransport({
-  service: 'smtp.gmail.com',
-  port: 587,
-  secure: false,
-  auth: {
-    user: env.GMAIL_USER,
-    pass: env.GMAIL_APP_PASSWORD,
-  },
-});
+const resend = new Resend(env.RESEND_API_KEY);
 
 export interface BillEmailData {
   to: string;
@@ -63,8 +55,8 @@ export const sendBillEmail = async (data: BillEmailData): Promise<void> => {
   `;
 
   try {
-    await transporter.sendMail({
-      from: `GDV Water Billing <${env.GMAIL_USER}>`,
+    await resend.emails.send({
+      from: 'GDV Society <bills@gdvsociety.in>',
       to,
       subject: `Water Bill — Villa ${villaNumber} — ${billingMonth}`,
       html,

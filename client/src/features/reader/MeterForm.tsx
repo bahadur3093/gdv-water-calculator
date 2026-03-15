@@ -43,10 +43,10 @@ export default function MeterForm() {
       api.post('/readings', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       }),
-    onSuccess: (res) => {
+    onSuccess: (_res) => {
       qc.invalidateQueries({ queryKey: ['readings'] });
       qc.invalidateQueries({ queryKey: ['bills'] });
-      const bill = res.data?.data;
+      // const bill = res.data?.data;
       setSuccess(
         `Reading saved! Bill generated successfully.`
       );
@@ -105,7 +105,7 @@ export default function MeterForm() {
     ? units * currentRate.ratePerUnit
     : null;
 
-  const selectedVilla = villas.find((v) => v._id === form.villaId);
+  // const selectedVilla = villas.find((v) => v._id === form.villaId);
 
   return (
     <PageShell title="GDV" navLinks={readerLinks}>

@@ -4,7 +4,6 @@ import PageShell from '@/components/layout/PageShell';
 import { Button, Input } from '@/components/ui';
 import api from '@/lib/axios';
 import { Rate } from '@/types';
-import { formatMonth } from '@/utils';
 
 const adminLinks = [
   { label: 'Dashboard', to: '/admin' },

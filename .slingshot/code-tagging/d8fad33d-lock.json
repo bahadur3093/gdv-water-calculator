@@ -1,0 +1,239 @@
+{
+  "client/src/features/admin/ManageUsers.tsx": {
+    "filename": "ManageUsers.tsx",
+    "path": "client/src/features/admin/ManageUsers.tsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "126916": {
+        "user": "Bahadur Singh",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773558254,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "1a142ca1",
+        "messageId": "98d30ca2-2ed5-4e51-91e1-b4d78db96f20",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "3f69b4": {
+        "user": "Bahadur Singh",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773558254,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "6f476de9",
+        "messageId": "98d30ca2-2ed5-4e51-91e1-b4d78db96f20",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "db42c0": {
+        "user": "Bahadur Singh",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773558254,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "20ba8849",
+        "messageId": "98d30ca2-2ed5-4e51-91e1-b4d78db96f20",
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "15": {
+        "chunkId": "db42c0",
+        "hash": "7b8f8e0f",
+        "encoded": "const%20emptyForm%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "db42c0",
+        "hash": "c536ae40",
+        "encoded": "name:%20%22%22,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "db42c0",
+        "hash": "0d587a37",
+        "encoded": "email:%20%22%22,",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "db42c0",
+        "hash": "00a42fb0",
+        "encoded": "password:%20%22%22,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "db42c0",
+        "hash": "ad4672ef",
+        "encoded": "role:%20%22resident%22%20as%20UserRole,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "db42c0",
+        "hash": "eb117909",
+        "encoded": "villaId:%20%22%22,",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "db42c0",
+        "hash": "c2b0f4d3",
+        "encoded": "phone:%20%22%22,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "db42c0",
+        "hash": "4da7dd63",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "3f69b4",
+        "hash": "a107343b",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "126916",
+        "hash": "0186a8b3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "3f69b4",
+        "hash": "a2a22340",
+        "encoded": "setEditing(null);",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "3f69b4",
+        "hash": "413130ce",
+        "encoded": "setForm(emptyForm);",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "126916",
+        "hash": "7cf3ec4f",
+        "encoded": "setError(%22%22);",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "126916",
+        "hash": "61184d1c",
+        "encoded": "setModalOpen(true);",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "126916",
+        "hash": "8976165b",
+        "encoded": "const%20openEdit%20=%20(user:%20User)%20=%3E%20%7B",
+        "prevChunkIds": [
+          "126916"
+        ]
+      },
+      "86": {
+        "chunkId": "126916",
+        "hash": "d0e132d4",
+        "encoded": "setEditing(user);",
+        "prevChunkIds": [
+          "126916"
+        ]
+      },
+      "87": {
+        "chunkId": "126916",
+        "hash": "2842103c",
+        "encoded": "setForm(%7B",
+        "prevChunkIds": [
+          "126916"
+        ]
+      },
+      "88": {
+        "chunkId": "126916",
+        "hash": "cab0e353",
+        "encoded": "name:%20user.name,",
+        "prevChunkIds": [
+          "126916"
+        ]
+      },
+      "89": {
+        "chunkId": "126916",
+        "hash": "2a6f316d",
+        "encoded": "email:%20user.email,",
+        "prevChunkIds": [
+          "126916"
+        ]
+      },
+      "90": {
+        "chunkId": "126916",
+        "hash": "f8f7341a",
+        "encoded": "password:%20%22%22,",
+        "prevChunkIds": [
+          "126916"
+        ]
+      },
+      "91": {
+        "chunkId": "126916",
+        "hash": "3511f77c",
+        "encoded": "role:%20user.role,",
+        "prevChunkIds": [
+          "126916"
+        ]
+      },
+      "92": {
+        "chunkId": "126916",
+        "hash": "89cca847",
+        "encoded": "villaId:%20user.villaId%20%7C%7C%20%22%22,",
+        "prevChunkIds": [
+          "126916"
+        ]
+      },
+      "93": {
+        "chunkId": "126916",
+        "hash": "13c82edf",
+        "encoded": "phone:%20user.phone%20%7C%7C%20%22%22,",
+        "prevChunkIds": [
+          "126916"
+        ]
+      },
+      "95": {
+        "chunkId": "3f69b4",
+        "hash": "33de77de",
+        "encoded": "setError(%22%22);",
+        "prevChunkIds": [
+          "126916"
+        ]
+      },
+      "99": {
+        "chunkId": "3f69b4",
+        "hash": "4c43f040",
+        "encoded": "const%20closeModal%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "3f69b4",
+        "hash": "536bc57d",
+        "encoded": "setModalOpen(false);",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "126916",
+        "hash": "567d1a41",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

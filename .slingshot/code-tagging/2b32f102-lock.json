@@ -1,0 +1,594 @@
+{
+  "server/src/modules/users/user.service.ts": {
+    "filename": "user.service.ts",
+    "path": "server/src/modules/users/user.service.ts",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "ce3be3": {
+        "user": "Bahadur Singh",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773556523,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "34988867",
+        "messageId": "98d30ca2-2ed5-4e51-91e1-b4d78db96f20",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "7b5016": {
+        "user": "Bahadur Singh",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773556523,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "d8644a30",
+        "messageId": "98d30ca2-2ed5-4e51-91e1-b4d78db96f20",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "2f821a": {
+        "user": "Bahadur Singh",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773556523,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "50356b49",
+        "messageId": "98d30ca2-2ed5-4e51-91e1-b4d78db96f20",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "a8bca3": {
+        "user": "Bahadur Singh",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773556523,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "6fa1fd4e",
+        "messageId": "98d30ca2-2ed5-4e51-91e1-b4d78db96f20",
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "17": {
+        "chunkId": "a8bca3",
+        "hash": "cc999928",
+        "encoded": "return%20users.map((u)%20=%3E%20(%7B",
+        "prevChunkIds": [
+          "ce3be3"
+        ]
+      },
+      "18": {
+        "chunkId": "a8bca3",
+        "hash": "8b8e64ea",
+        "encoded": "...u.toObject(),",
+        "prevChunkIds": [
+          "ce3be3"
+        ]
+      },
+      "19": {
+        "chunkId": "ce3be3",
+        "hash": "2f9b9cee",
+        "encoded": "isAdmin:%20u.role%20===%20'admin',",
+        "prevChunkIds": [
+          "ce3be3"
+        ]
+      },
+      "20": {
+        "chunkId": "a8bca3",
+        "hash": "021e3900",
+        "encoded": "villa:%20villaMap.get(u._id.toString())%20%7C%7C%20null,",
+        "prevChunkIds": [
+          "ce3be3"
+        ]
+      },
+      "21": {
+        "chunkId": "a8bca3",
+        "hash": "605b5926",
+        "encoded": "%7D));",
+        "prevChunkIds": [
+          "ce3be3"
+        ]
+      },
+      "22": {
+        "chunkId": "2f821a",
+        "hash": "4da7dd63",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "2f821a",
+        "hash": "5964b945",
+        "encoded": "export%20const%20createUser%20=%20async%20(data:%20%7B",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "25": {
+        "chunkId": "2f821a",
+        "hash": "44a3910f",
+        "encoded": "name:%20string;",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "26": {
+        "chunkId": "2f821a",
+        "hash": "a433c9df",
+        "encoded": "email:%20string;",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "27": {
+        "chunkId": "2f821a",
+        "hash": "5b07f4b9",
+        "encoded": "password:%20string;",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "28": {
+        "chunkId": "2f821a",
+        "hash": "8d6aaa02",
+        "encoded": "role:%20string;",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "29": {
+        "chunkId": "2f821a",
+        "hash": "0ae2e656",
+        "encoded": "villaId?:%20string;",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "30": {
+        "chunkId": "2f821a",
+        "hash": "8c67c08f",
+        "encoded": "phone?:%20string;",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "31": {
+        "chunkId": "2f821a",
+        "hash": "f93400a8",
+        "encoded": "%7D)%20=%3E%20%7B",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "32": {
+        "chunkId": "2f821a",
+        "hash": "c475a08b",
+        "encoded": "const%20exists%20=%20await%20User.findOne(%7B%20email:%20data.email%20%7D);",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "33": {
+        "chunkId": "2f821a",
+        "hash": "7c586cc5",
+        "encoded": "if%20(exists)%20throw%20new%20ApiError(409,%20%22Email%20already%20in%20use%22);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "2f821a",
+        "hash": "7dbfb26c",
+        "encoded": "const%20user%20=%20await%20User.create(data);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "2f821a",
+        "hash": "dac6d6fa",
+        "encoded": "//%20If%20villaId%20is%20provided,%20update%20the%20villa's%20residentId%20and%20fetch%20villa%20details",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "38": {
+        "chunkId": "2f821a",
+        "hash": "d0a08826",
+        "encoded": "if%20(data.villaId)%20%7B",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "39": {
+        "chunkId": "2f821a",
+        "hash": "301320b8",
+        "encoded": "await%20Villa.findByIdAndUpdate(data.villaId,%20%7B%20residentId:%20user._id%20%7D);",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "2f821a",
+        "hash": "fec8f22d",
+        "encoded": "//%20Fetch%20the%20updated%20user%20with%20villa%20details",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "42": {
+        "chunkId": "2f821a",
+        "hash": "c471f726",
+        "encoded": "const%20userWithVilla%20=%20await%20User.findById(user._id).lean();",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "43": {
+        "chunkId": "2f821a",
+        "hash": "9e61e059",
+        "encoded": "const%20villa%20=%20await%20Villa.findById(data.villaId,%20%22villaNumber%20address%22).lean();",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "2f821a",
+        "hash": "b80fcc70",
+        "encoded": "return%20%7B",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "46": {
+        "chunkId": "2f821a",
+        "hash": "1e02916e",
+        "encoded": "...userWithVilla,",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "47": {
+        "chunkId": "2f821a",
+        "hash": "ab66c5ba",
+        "encoded": "villa:%20villa%20?%20%7B",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "48": {
+        "chunkId": "2f821a",
+        "hash": "7f51d9ea",
+        "encoded": "_id:%20villa._id,",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "49": {
+        "chunkId": "2f821a",
+        "hash": "38598124",
+        "encoded": "villaNumber:%20villa.villaNumber,",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "50": {
+        "chunkId": "2f821a",
+        "hash": "c335fa3a",
+        "encoded": "address:%20villa.address",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "51": {
+        "chunkId": "2f821a",
+        "hash": "fbfab1fd",
+        "encoded": "%7D%20:%20null",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "52": {
+        "chunkId": "2f821a",
+        "hash": "76aae8c3",
+        "encoded": "%7D;",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "53": {
+        "chunkId": "2f821a",
+        "hash": "e392f376",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "2f821a",
+        "hash": "c63b8885",
+        "encoded": "return%20%7B%20...user.toObject(),%20villa:%20null%20%7D;",
+        "prevChunkIds": [
+          "2f821a"
+        ]
+      },
+      "56": {
+        "chunkId": "7b5016",
+        "hash": "3ec42eee",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "7b5016",
+        "hash": "f2719eac",
+        "encoded": "export%20const%20updateUser%20=%20async%20(",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "7b5016",
+        "hash": "43b49d0e",
+        "encoded": "id:%20string,",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "7b5016",
+        "hash": "e3aa9825",
+        "encoded": "data:%20Partial%3C%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "7b5016",
+        "hash": "d956a6c2",
+        "encoded": "name:%20string;",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "7b5016",
+        "hash": "3129121e",
+        "encoded": "phone:%20string;",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "7b5016",
+        "hash": "e94de9ac",
+        "encoded": "villaId:%20string;",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "7b5016",
+        "hash": "40541826",
+        "encoded": "isActive:%20boolean;",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "7b5016",
+        "hash": "9b5361af",
+        "encoded": "%7D%3E,",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "7b5016",
+        "hash": "45bcf0e7",
+        "encoded": ")%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "7b5016",
+        "hash": "1845742d",
+        "encoded": "const%20currentUser%20=%20await%20User.findById(id);",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "7b5016",
+        "hash": "3a4a2d3a",
+        "encoded": "if%20(!currentUser)%20throw%20new%20ApiError(404,%20%22User%20not%20found%22);",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "7b5016",
+        "hash": "99f2dac9",
+        "encoded": "//%20If%20villaId%20is%20being%20updated,%20handle%20villa%20resident%20assignment",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "7b5016",
+        "hash": "679d0486",
+        "encoded": "if%20(data.villaId%20!==%20undefined)%20%7B",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "7b5016",
+        "hash": "878168e4",
+        "encoded": "//%20Remove%20user%20from%20previous%20villa%20if%20exists",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "7b5016",
+        "hash": "cc6de831",
+        "encoded": "if%20(currentUser.villaId)%20%7B",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "7b5016",
+        "hash": "31499724",
+        "encoded": "await%20Villa.findByIdAndUpdate(currentUser.villaId,%20%7B%20$unset:%20%7B%20residentId:%201%20%7D%20%7D);",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "7b5016",
+        "hash": "5250e31e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "7b5016",
+        "hash": "2eb0617b",
+        "encoded": "//%20Assign%20user%20to%20new%20villa%20if%20villaId%20is%20provided",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "7b5016",
+        "hash": "83442e95",
+        "encoded": "if%20(data.villaId)%20%7B",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "7b5016",
+        "hash": "91d41b2e",
+        "encoded": "await%20Villa.findByIdAndUpdate(data.villaId,%20%7B%20residentId:%20id%20%7D);",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "7b5016",
+        "hash": "a2f26355",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "7b5016",
+        "hash": "d6938858",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "7b5016",
+        "hash": "30cab324",
+        "encoded": "const%20user%20=%20await%20User.findByIdAndUpdate(id,%20data,%20%7B",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "7b5016",
+        "hash": "5b1ca07c",
+        "encoded": "new:%20true,",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "7b5016",
+        "hash": "45933af7",
+        "encoded": "runValidators:%20true,",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "7b5016",
+        "hash": "ebf57a2c",
+        "encoded": "%7D).lean();",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "7b5016",
+        "hash": "ee6e23b7",
+        "encoded": "if%20(!user)%20throw%20new%20ApiError(404,%20%22User%20not%20found%22);",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "7b5016",
+        "hash": "d4236375",
+        "encoded": "//%20Fetch%20villa%20details%20if%20user%20has%20villaId",
+        "prevChunkIds": [
+          "7b5016"
+        ]
+      },
+      "91": {
+        "chunkId": "7b5016",
+        "hash": "776fe9c3",
+        "encoded": "if%20(user.villaId)%20%7B",
+        "prevChunkIds": [
+          "7b5016"
+        ]
+      },
+      "92": {
+        "chunkId": "7b5016",
+        "hash": "e59cef75",
+        "encoded": "const%20villa%20=%20await%20Villa.findById(user.villaId,%20%22villaNumber%20address%22).lean();",
+        "prevChunkIds": [
+          "7b5016"
+        ]
+      },
+      "93": {
+        "chunkId": "7b5016",
+        "hash": "f2e9f514",
+        "encoded": "return%20%7B",
+        "prevChunkIds": [
+          "7b5016"
+        ]
+      },
+      "94": {
+        "chunkId": "7b5016",
+        "hash": "aae4620b",
+        "encoded": "...user,",
+        "prevChunkIds": [
+          "7b5016"
+        ]
+      },
+      "95": {
+        "chunkId": "7b5016",
+        "hash": "30b20928",
+        "encoded": "villa:%20villa%20?%20%7B",
+        "prevChunkIds": [
+          "7b5016"
+        ]
+      },
+      "96": {
+        "chunkId": "7b5016",
+        "hash": "b4e9aae5",
+        "encoded": "_id:%20villa._id,",
+        "prevChunkIds": [
+          "7b5016"
+        ]
+      },
+      "97": {
+        "chunkId": "7b5016",
+        "hash": "3487d9eb",
+        "encoded": "villaNumber:%20villa.villaNumber,",
+        "prevChunkIds": [
+          "7b5016"
+        ]
+      },
+      "98": {
+        "chunkId": "7b5016",
+        "hash": "4078c7f9",
+        "encoded": "address:%20villa.address",
+        "prevChunkIds": [
+          "7b5016"
+        ]
+      },
+      "99": {
+        "chunkId": "7b5016",
+        "hash": "8825feb0",
+        "encoded": "%7D%20:%20null",
+        "prevChunkIds": [
+          "7b5016"
+        ]
+      },
+      "100": {
+        "chunkId": "7b5016",
+        "hash": "891eea05",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "7b5016",
+        "hash": "6bf91891",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "7b5016"
+        ]
+      },
+      "103": {
+        "chunkId": "7b5016",
+        "hash": "1e41dc22",
+        "encoded": "return%20%7B%20...user,%20villa:%20null%20%7D;",
+        "prevChunkIds": [
+          "7b5016"
+        ]
+      }
+    }
+  }
+}

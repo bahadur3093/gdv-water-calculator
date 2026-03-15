@@ -1,0 +1,87 @@
+import { Bill } from '@/types';
+import { formatCurrency, formatMonth } from '@/utils';
+import { Badge } from '@/components/ui';
+
+interface BillCardProps {
+  bill: Bill;
+  showVilla?: boolean;
+}
+
+const statusBadge: Record<Bill['status'], 'amber' | 'blue' | 'green'> = {
+  pending: 'amber',
+  sent:    'blue',
+  paid:    'green',
+};
+
+export default function BillCard({ bill, showVilla = false }: BillCardProps) {
+  const villa = typeof bill.villaId === 'object' ? bill.villaId : null;
+
+  return (
+    <div className="bg-white rounded-xl border border-gray-200 p-5 hover:border-gray-300 transition-colors">
+      {/* Header */}
+      <div className="flex items-start justify-between mb-4">
+        <div>
+          {showVilla && villa && (
+            <p className="text-xs font-medium text-brand-600 mb-0.5">
+              Villa {villa.villaNumber}
+            </p>
+          )}
+          <p className="text-base font-semibold text-gray-900">
+            {formatMonth(bill.billingMonth)}
+          </p>
+          <p className="text-xs text-gray-400 mt-0.5">
+            {new Date(bill.createdAt).toLocaleDateString('en-IN', {
+              day: 'numeric', month: 'short', year: 'numeric',
+            })}
+          </p>
+        </div>
+        <Badge variant={statusBadge[bill.status]}>
+          {bill.status.charAt(0).toUpperCase() + bill.status.slice(1)}
+        </Badge>
+      </div>
+
+      {/* Usage row */}
+      <div className="grid grid-cols-3 gap-3 mb-4">
+        <div className="bg-gray-50 rounded-lg px-3 py-2.5">
+          <p className="text-xs text-gray-400 mb-0.5">Units used</p>
+          <p className="text-sm font-semibold text-gray-800">{bill.unitsConsumed}</p>
+        </div>
+        <div className="bg-gray-50 rounded-lg px-3 py-2.5">
+          <p className="text-xs text-gray-400 mb-0.5">Rate</p>
+          <p className="text-sm font-semibold text-gray-800">₹{bill.ratePerUnit.toFixed(2)}</p>
+        </div>
+        <div className="bg-brand-50 rounded-lg px-3 py-2.5">
+          <p className="text-xs text-brand-500 mb-0.5">Amount due</p>
+          <p className="text-sm font-semibold text-brand-700">{formatCurrency(bill.amount)}</p>
+        </div>
+      </div>
+
+      {/* Reading details */}
+      {typeof bill.readingId === 'object' && bill.readingId && (
+        <div className="flex items-center gap-4 text-xs text-gray-400 pt-3 border-t border-gray-100">
+          <span>
+            Prev: <span className="text-gray-600 font-medium">
+              {(bill.readingId as any).previousReading}
+            </span>
+          </span>
+          <span>→</span>
+          <span>
+            Current: <span className="text-gray-600 font-medium">
+              {(bill.readingId as any).currentReading}
+            </span>
+          </span>
+          {(bill.readingId as any).photoUrl && (
+            <a
+              href={(bill.readingId as any).photoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-auto text-brand-500 hover:text-brand-700 underline"
+            >
+              View photo
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}

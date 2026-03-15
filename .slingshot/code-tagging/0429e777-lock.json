@@ -1,0 +1,123 @@
+{
+  "server/src/modules/billing/billing.service.ts": {
+    "filename": "billing.service.ts",
+    "path": "server/src/modules/billing/billing.service.ts",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "1d21d7": {
+        "user": "Bahadur Singh",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773569270,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "6434b95c",
+        "messageId": "98d30ca2-2ed5-4e51-91e1-b4d78db96f20",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "d2155f": {
+        "user": "Bahadur Singh",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773569271,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "da806a03",
+        "messageId": "98d30ca2-2ed5-4e51-91e1-b4d78db96f20",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "e62a9c": {
+        "user": "Bahadur Singh",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773569271,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "4ac8192f",
+        "messageId": "98d30ca2-2ed5-4e51-91e1-b4d78db96f20",
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "45": {
+        "chunkId": "1d21d7",
+        "hash": "816d4a12",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "e62a9c",
+        "hash": "ead14f99",
+        "encoded": "const%20bill%20=%20await%20Bill.findById(billId).populate('villaId').populate('readingId');",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "d2155f",
+        "hash": "0a310810",
+        "encoded": "const%20resident%20=%20await%20User.findById(villa.residentId);",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "d2155f",
+        "hash": "bec01d0c",
+        "encoded": "if%20(!resident?.email)%20throw%20new%20ApiError(400,%20'Resident%20has%20no%20email%20address');",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "d2155f",
+        "hash": "ae5205bf",
+        "encoded": "//%20Get%20the%20reading%20to%20access%20the%20photo%20URL",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "d2155f",
+        "hash": "6e94b78f",
+        "encoded": "const%20reading%20=%20bill.readingId%20as%20any;",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "d2155f",
+        "hash": "889e97ed",
+        "encoded": "await%20sendBillEmail(%7B",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "1d21d7",
+        "hash": "051b9865",
+        "encoded": "unitsConsumed:%20bill.unitsConsumed,",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "1d21d7",
+        "hash": "a254ab6c",
+        "encoded": "ratePerUnit:%20bill.ratePerUnit,",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "1d21d7",
+        "hash": "e0c7084b",
+        "encoded": "amount:%20bill.amount,",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "1d21d7",
+        "hash": "9599e020",
+        "encoded": "photoUrl:%20reading?.photoUrl,%20//%20Include%20the%20Cloudinary%20photo%20URL",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

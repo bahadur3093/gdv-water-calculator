@@ -106,7 +106,7 @@ export default function AllBills() {
       </div>
 
       {/* Summary bar */}
-      <div className="grid grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-2 gap-4 mb-6">
         <div className="bg-white rounded-xl border border-gray-200 p-4">
           <p className="text-xs text-gray-400 mb-1">Total</p>
           <p className="text-2xl font-semibold text-gray-900">

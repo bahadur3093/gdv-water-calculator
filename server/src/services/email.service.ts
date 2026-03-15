@@ -48,7 +48,7 @@ export const sendBillEmail = async (data: BillEmailData): Promise<void> => {
         </tr>
       </table>
       <p style="font-size:13px;color:#999;margin-top:32px;">
-        This is an automated message from the Aqua47 water management system.<br/>
+        This is an automated message from the GDV water management system.<br/>
         Please do not reply to this email.
       </p>
     </div>

@@ -32,10 +32,10 @@ export default function AdminDashboard() {
     retry: false,
   });
 
-  const totalRevenue     = bills.filter((b) => b.status === 'paid').reduce((s, b) => s + b.amount, 0);
-  const outstanding      = bills.filter((b) => b.status !== 'paid').reduce((s, b) => s + b.amount, 0);
-  const pendingCount     = bills.filter((b) => b.status === 'pending').length;
-  const residentCount    = users.filter((u) => u.role === 'resident').length;
+  const totalRevenue  = bills.filter((b) => b.status === 'paid').reduce((s, b) => s + b.amount, 0);
+  const outstanding   = bills.filter((b) => b.status !== 'paid').reduce((s, b) => s + b.amount, 0);
+  const pendingCount  = bills.filter((b) => b.status === 'pending').length;
+  const residentCount = users.filter((u) => u.role === 'resident').length;
   const assignedVillas   = villas.filter((v) => v.residentId).length;
   const unassignedVillas = villas.filter((v) => !v.residentId).length;
 
@@ -79,7 +79,7 @@ export default function AdminDashboard() {
         <div className="bg-white rounded-xl border border-gray-200 p-4">
           <p className="text-xs text-gray-400 mb-1">Villas</p>
           <p className="text-xl font-semibold text-gray-900">{villas.length}</p>
-          <p className="text-xs text-gray-400 mt-1">{assignedVillas} assigned · {unassignedVillas} unassigned</p>
+          <p className="text-xs text-gray-400 mt-1">{assignedVillas} assigned · {unassignedVillas} free</p>
         </div>
         <div className="bg-white rounded-xl border border-gray-200 p-4">
           <p className="text-xs text-gray-400 mb-1">Residents</p>
@@ -98,19 +98,18 @@ export default function AdminDashboard() {
             <div className="h-32 flex items-center justify-center text-sm text-gray-300">No data yet</div>
           ) : (
             <>
-              <div className="flex items-end gap-2 h-28">
+              <div className="flex items-end gap-2 h-32">
                 {months.map((month) => {
                   const d      = monthlyData[month];
                   const totalH = Math.round((d.total / maxAmount) * 100);
                   const paidH  = Math.round((d.paid  / maxAmount) * 100);
                   return (
                     <div key={month} className="flex-1 flex flex-col items-center gap-1">
-                      <div className="w-full flex flex-col justify-end h-20 relative">
+                      <div className="w-full flex flex-col justify-end h-24 relative">
                         <div className="w-full bg-brand-100 rounded-t-md absolute bottom-0" style={{ height: `${totalH}%` }} />
                         <div className="w-full bg-brand-600 rounded-t-md absolute bottom-0" style={{ height: `${paidH}%` }} />
                       </div>
                       <p className="text-xs text-gray-400">{month.split('-')[1]}/{month.split('-')[0].slice(2)}</p>
-                      <p className="text-xs font-medium text-gray-600 hidden sm:block">{formatCurrency(d.total)}</p>
                     </div>
                   );
                 })}
@@ -132,7 +131,9 @@ export default function AdminDashboard() {
               {(['pending', 'sent', 'paid'] as const).map((status) => {
                 const count = bills.filter((b) => b.status === status).length;
                 const pct   = bills.length > 0 ? Math.round((count / bills.length) * 100) : 0;
-                const colors: Record<string, string> = { pending: 'bg-amber-400', sent: 'bg-blue-400', paid: 'bg-green-400' };
+                const colors: Record<string, string> = {
+                  pending: 'bg-amber-400', sent: 'bg-blue-400', paid: 'bg-green-400',
+                };
                 return (
                   <div key={status}>
                     <div className="flex justify-between text-xs mb-1">
@@ -178,7 +179,7 @@ export default function AdminDashboard() {
                   <div key={bill._id} className="px-4 py-3 flex items-center justify-between">
                     <div>
                       <p className="text-sm font-medium text-gray-900">{villa ? `Villa ${villa.villaNumber}` : '—'}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{formatMonth(bill.billingMonth)}</p>
+                      <p className="text-xs text-gray-400">{formatMonth(bill.billingMonth)}</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className={`text-xs font-medium px-2 py-0.5 rounded-md border capitalize ${statusColor[bill.status]}`}>{bill.status}</span>

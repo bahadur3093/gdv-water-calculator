@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import { Bill } from '@/types';
 import { formatCurrency, formatMonth } from '@/utils';
-import { Badge } from '@/components/ui';
+import { Badge, Button, Modal } from '@/components/ui';
 
 interface BillCardProps {
   bill: Bill;
@@ -14,7 +15,19 @@ const statusBadge: Record<Bill['status'], 'amber' | 'blue' | 'green'> = {
 };
 
 export default function BillCard({ bill, showVilla = false }: BillCardProps) {
+  const [photoModalOpen, setPhotoModalOpen] = useState(false);
+  const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
   const villa = typeof bill.villaId === 'object' ? bill.villaId : null;
+
+  const openPhotoModal = (photoUrl: string) => {
+    setSelectedPhoto(photoUrl);
+    setPhotoModalOpen(true);
+  };
+
+  const closePhotoModal = () => {
+    setSelectedPhoto(null);
+    setPhotoModalOpen(false);
+  };
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-5 hover:border-gray-300 transition-colors">
@@ -58,29 +71,40 @@ export default function BillCard({ bill, showVilla = false }: BillCardProps) {
 
       {/* Reading details */}
       {typeof bill.readingId === 'object' && bill.readingId && (
-        <div className="flex items-center gap-4 text-xs text-gray-400 pt-3 border-t border-gray-100">
-          <span>
-            Prev: <span className="text-gray-600 font-medium">
-              {(bill.readingId as any).previousReading}
+        <>
+          <div className="flex items-center gap-4 text-xs text-gray-400 pt-3 border-t border-gray-100">
+            <span>
+              Prev: <span className="text-gray-600 font-medium">
+                {(bill.readingId as any).previousReading}
+              </span>
             </span>
-          </span>
-          <span>→</span>
-          <span>
-            Current: <span className="text-gray-600 font-medium">
-              {(bill.readingId as any).currentReading}
+            <span>→</span>
+            <span>
+              Current: <span className="text-gray-600 font-medium">
+                {(bill.readingId as any).currentReading}
+              </span>
             </span>
-          </span>
-          {(bill.readingId as any).photoUrl && (
-            <a
-              href={(bill.readingId as any).photoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-auto text-brand-500 hover:text-brand-700 underline"
-            >
-              View photo
-            </a>
-          )}
-        </div>
+            {(bill.readingId as any).photoUrl && (
+              <Button
+                type="button"
+                variant="secondary"
+                size="sm"
+                onClick={() => openPhotoModal((bill.readingId as any).photoUrl)}
+                className="ml-auto text-xs"
+              >
+                View photo
+              </Button>
+            )}
+          </div>
+
+          <Modal open={photoModalOpen} onClose={closePhotoModal} title="Reading Photo" width="max-w-xl">
+            {selectedPhoto ? (
+              <img src={selectedPhoto} alt="Reading" className="max-h-[60vh] w-full object-contain" />
+            ) : (
+              <p className="text-sm text-gray-500">No image available</p>
+            )}
+          </Modal>
+        </>
       )}
     </div>
   );

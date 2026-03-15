@@ -52,142 +52,142 @@
       }
     },
     "lines": {
-      "12": {
-        "chunkId": "10ef10",
-        "hash": "2e7d0d82",
-        "encoded": "export%20interface%20BillEmailData%20%7B",
-        "prevChunkIds": []
-      },
-      "13": {
-        "chunkId": "10ef10",
-        "hash": "46014483",
-        "encoded": "to:%20string;",
-        "prevChunkIds": []
-      },
       "14": {
         "chunkId": "10ef10",
-        "hash": "48cd0c13",
-        "encoded": "name:%20string;",
+        "hash": "ce35c937",
+        "encoded": "export%20interface%20BillEmailData%20%7B",
         "prevChunkIds": []
       },
       "15": {
         "chunkId": "10ef10",
-        "hash": "ce221972",
-        "encoded": "villaNumber:%20string;",
+        "hash": "1e485529",
+        "encoded": "to:%20string;",
         "prevChunkIds": []
       },
       "16": {
         "chunkId": "10ef10",
-        "hash": "289756de",
-        "encoded": "billingMonth:%20string;",
+        "hash": "69d9447d",
+        "encoded": "name:%20string;",
         "prevChunkIds": []
       },
       "17": {
         "chunkId": "10ef10",
-        "hash": "b710a9fe",
-        "encoded": "unitsConsumed:%20number;",
+        "hash": "bc386b7e",
+        "encoded": "villaNumber:%20string;",
         "prevChunkIds": []
       },
       "18": {
         "chunkId": "10ef10",
-        "hash": "6a7d5d54",
-        "encoded": "ratePerUnit:%20number;",
+        "hash": "6ac354e3",
+        "encoded": "billingMonth:%20string;",
         "prevChunkIds": []
       },
       "19": {
         "chunkId": "10ef10",
-        "hash": "0d9ed8f6",
-        "encoded": "amount:%20number;",
+        "hash": "4f7ccd92",
+        "encoded": "unitsConsumed:%20number;",
         "prevChunkIds": []
       },
       "20": {
         "chunkId": "10ef10",
-        "hash": "47757cf8",
-        "encoded": "photoUrl?:%20string;%20//%20Cloudinary%20URL%20for%20the%20meter%20reading%20photo",
+        "hash": "6715f952",
+        "encoded": "ratePerUnit:%20number;",
         "prevChunkIds": []
       },
       "21": {
         "chunkId": "10ef10",
-        "hash": "4b5cc20d",
+        "hash": "49fe1ca9",
+        "encoded": "amount:%20number;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "10ef10",
+        "hash": "3c4013d9",
+        "encoded": "photoUrl?:%20string;%20//%20Cloudinary%20URL%20for%20the%20meter%20reading%20photo",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "10ef10",
+        "hash": "7b3531ab",
         "encoded": "%7D",
         "prevChunkIds": []
       },
-      "31": {
-        "chunkId": "0b8aa3",
-        "hash": "3d73f29a",
-        "encoded": "%3Cp%3EDear%20$%7Bname%7D,%3C/p%3E",
+      "25": {
+        "chunkId": "913f0d",
+        "hash": "7af0f27b",
+        "encoded": "export%20const%20sendBillEmail%20=%20async%20(data:%20BillEmailData):%20Promise%3Cvoid%3E%20=%3E%20%7B",
         "prevChunkIds": []
       },
-      "32": {
-        "chunkId": "0b8aa3",
-        "hash": "d8c62a64",
-        "encoded": "%3Cp%3EYour%20water%20usage%20bill%20for%20%3Cstrong%3EVilla%20$%7BvillaNumber%7D%3C/strong%3E%20for%20%3Cstrong%3E$%7BbillingMonth%7D%3C/strong%3E%20is%20ready.%3C/p%3E",
+      "26": {
+        "chunkId": "913f0d",
+        "hash": "573f86d2",
+        "encoded": "const%20%7B%20to,%20name,%20villaNumber,%20billingMonth,%20unitsConsumed,%20ratePerUnit,%20amount,%20photoUrl%20%7D%20=%20data;",
         "prevChunkIds": []
       },
       "33": {
         "chunkId": "0b8aa3",
-        "hash": "61dc2720",
-        "encoded": "$%7BphotoUrl%20?%20%60",
+        "hash": "eca48b94",
+        "encoded": "%3Cp%3EDear%20$%7Bname%7D,%3C/p%3E",
         "prevChunkIds": []
       },
       "34": {
         "chunkId": "0b8aa3",
-        "hash": "19b8bdd6",
-        "encoded": "%3Cdiv%20style=%22margin:20px%200;text-align:center;%22%3E",
+        "hash": "774e38d2",
+        "encoded": "%3Cp%3EYour%20water%20usage%20bill%20for%20%3Cstrong%3EVilla%20$%7BvillaNumber%7D%3C/strong%3E%20for%20%3Cstrong%3E$%7BbillingMonth%7D%3C/strong%3E%20is%20ready.%3C/p%3E",
         "prevChunkIds": []
       },
       "35": {
         "chunkId": "0b8aa3",
-        "hash": "c6ddbf86",
-        "encoded": "%3Ch3%20style=%22color:#1e3a5f;font-size:16px;margin-bottom:12px;%22%3EMeter%20Reading%20Photo%3C/h3%3E",
+        "hash": "4a17569b",
+        "encoded": "$%7BphotoUrl%20?%20%60",
         "prevChunkIds": []
       },
       "36": {
         "chunkId": "0b8aa3",
-        "hash": "c55d12f2",
-        "encoded": "%3Cimg%20src=%22$%7BphotoUrl%7D%22%20alt=%22Meter%20reading%20for%20Villa%20$%7BvillaNumber%7D%22",
+        "hash": "b1124210",
+        "encoded": "%3Cdiv%20style=%22margin:20px%200;text-align:center;%22%3E",
         "prevChunkIds": []
       },
       "37": {
         "chunkId": "0b8aa3",
-        "hash": "c76d8fcf",
-        "encoded": "style=%22max-width:100%25;height:auto;border:2px%20solid%20#e0e0e0;border-radius:8px;box-shadow:0%202px%208px%20rgba(0,0,0,0.1);%22%20/%3E",
+        "hash": "ed4c5a10",
+        "encoded": "%3Ch3%20style=%22color:#1e3a5f;font-size:16px;margin-bottom:12px;%22%3EMeter%20Reading%20Photo%3C/h3%3E",
         "prevChunkIds": []
       },
       "38": {
         "chunkId": "0b8aa3",
-        "hash": "9da852fd",
-        "encoded": "%3Cp%20style=%22font-size:12px;color:#666;margin-top:8px;%22%3EMeter%20reading%20captured%20for%20billing%20period%3C/p%3E",
+        "hash": "4d6930ca",
+        "encoded": "%3Cimg%20src=%22$%7BphotoUrl%7D%22%20alt=%22Meter%20reading%20for%20Villa%20$%7BvillaNumber%7D%22",
         "prevChunkIds": []
       },
       "39": {
         "chunkId": "0b8aa3",
-        "hash": "d31a7a42",
-        "encoded": "%3C/div%3E",
+        "hash": "ce552588",
+        "encoded": "style=%22max-width:100%25;height:auto;border:2px%20solid%20#e0e0e0;border-radius:8px;box-shadow:0%202px%208px%20rgba(0,0,0,0.1);%22%20/%3E",
         "prevChunkIds": []
       },
       "40": {
         "chunkId": "0b8aa3",
-        "hash": "aca88299",
-        "encoded": "%60%20:%20''%7D",
+        "hash": "980776d3",
+        "encoded": "%3Cp%20style=%22font-size:12px;color:#666;margin-top:8px;%22%3EMeter%20reading%20captured%20for%20billing%20period%3C/p%3E",
         "prevChunkIds": []
       },
       "41": {
         "chunkId": "0b8aa3",
-        "hash": "838036d4",
-        "encoded": "%3Ctable%20style=%22width:100%25;border-collapse:collapse;margin:24px%200;font-size:15px;%22%3E",
+        "hash": "6d9ef6e1",
+        "encoded": "%3C/div%3E",
         "prevChunkIds": []
       },
       "42": {
-        "chunkId": "913f0d",
-        "hash": "67a07cfa",
-        "encoded": "export%20const%20sendBillEmail%20=%20async%20(data:%20BillEmailData):%20Promise%3Cvoid%3E%20=%3E%20%7B",
+        "chunkId": "0b8aa3",
+        "hash": "83fb7b5b",
+        "encoded": "%60%20:%20''%7D",
         "prevChunkIds": []
       },
       "43": {
-        "chunkId": "913f0d",
-        "hash": "910068f7",
-        "encoded": "const%20%7B%20to,%20name,%20villaNumber,%20billingMonth,%20unitsConsumed,%20ratePerUnit,%20amount,%20photoUrl%20%7D%20=%20data;",
+        "chunkId": "0b8aa3",
+        "hash": "68362c36",
+        "encoded": "%3Ctable%20style=%22width:100%25;border-collapse:collapse;margin:24px%200;font-size:15px;%22%3E",
         "prevChunkIds": []
       }
     }

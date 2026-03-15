@@ -14,7 +14,6 @@ export const env = {
   CLOUDINARY_CLOUD_NAME: required("CLOUDINARY_CLOUD_NAME"),
   CLOUDINARY_API_KEY: required("CLOUDINARY_API_KEY"),
   CLOUDINARY_API_SECRET: required("CLOUDINARY_API_SECRET"),
-  RESEND_API_KEY: required("RESEND_API_KEY"),
   EMAIL_FROM: process.env.EMAIL_FROM || "bills@aqua47.com",
   GMAIL_USER: required("GMAIL_USER"),
   GMAIL_APP_PASSWORD: required("GMAIL_APP_PASSWORD"),

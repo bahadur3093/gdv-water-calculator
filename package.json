@@ -7,7 +7,7 @@
     "dev:server": "cd server && npm run dev",
     "dev:client": "cd client && npm run dev",
     "kill-ports": "lsof -ti :8080 | xargs kill -9 2>/dev/null; lsof -ti :5174 | xargs kill -9 2>/dev/null; true",
-    "build": "cd client && npm install && npm install --save-dev @types/react @types/react-dom && npm run build && cd ../server && npm install && npm run build",
+    "build": "cd client && npm install && npm run build && cd ../server && npm install && npm run build",
     "build:client": "cd client && npm run build",
     "build:server": "cd server && npm run build",
     "start": "cd server && npm run start",

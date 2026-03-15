@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "npm run kill-ports && concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "postinstall": "npm --prefix client install && npm --prefix server install",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "dev:server": "cd server && npm run dev",
     "dev:client": "cd client && npm run dev",
-    "kill-ports": "lsof -ti :8080 | xargs kill -9 2>/dev/null; lsof -ti :5174 | xargs kill -9 2>/dev/null; true",
-    "build": "npm run build:client && npm run build:server",
-    "build:client": "cd client && npm install && npm run build",
-    "build:server": "cd server && npm install && npm run build",
-    "start": "cd server && npm run start",
-    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
+    "build": "npm --prefix client run build && npm --prefix server run build",
+    "build:client": "npm --prefix client run build",
+    "build:server": "npm --prefix server run build",
+    "start": "npm --prefix server run start",
+    "install:all": "npm install && npm --prefix client install && npm --prefix server install"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

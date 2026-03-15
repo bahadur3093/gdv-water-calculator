@@ -9,7 +9,6 @@ import { formatMonth } from '@/utils';
 const readerLinks = [
   { label: 'Submit Reading', to: '/reader' },
   { label: 'History',        to: '/reader/history' },
-  { label: 'All Bills',      to: '/bills/all' },
 ];
 
 export default function ReadingHistory() {
